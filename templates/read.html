@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Messages</title>
+</head>
+<body>
+    <h1>All Messages</h1>
+    <ul>
+        {% for timestamp, message in messages.items() %}
+        <li>
+            <strong>{{ message.username }}</strong> ({{ timestamp }}): {{ message.message }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
